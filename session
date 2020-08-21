@@ -39,6 +39,8 @@ sudo add-apt-repository \
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+sudo gpasswd -a rajeshcnl61 docker (without adding rajeshcnl61 user to docker group,we cant run any command without sudo)
    
 *************************************************************************************************
 
