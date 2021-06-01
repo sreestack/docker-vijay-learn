@@ -352,6 +352,19 @@ docker images
 
 Docker Compose
 
+
+#########################################3
+how to install docker compose
+
+
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+docker-compose version
+
+#############################################
+
 save the below in docker-compose.yaml
 
 version: "2"
@@ -365,7 +378,21 @@ services:
     volumes:
       - ./data:/usr/share/nginx/html/
       
+Another ex:
 
+more docker-compose.yaml 
+
+version: "2"
+services:
+  webserver:
+    image: httpd
+    container_name: htt
+    hostname: sree
+    ports:
+      - "8098:80"
+    volumes:
+      - /data:/usr/local/apache2/htdocs
+      
 
 create data directory and create index.html
 
@@ -374,7 +401,9 @@ docker-compose up -d
 
 then 
 
-get the container IP address and curil -i <container ipaddress>
+http://35.222.106.158:8098/  - exam
+
+get the container IP address and curl -i <container ipaddress>
 
 ***********************************************************
 
